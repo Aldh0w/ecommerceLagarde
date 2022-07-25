@@ -1,0 +1,11 @@
+.navbar{
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 10px;
+}
