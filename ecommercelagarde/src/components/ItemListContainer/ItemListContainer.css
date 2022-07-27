@@ -1,0 +1,12 @@
+.mensaje{
+    background-color: cadetblue;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.mensaje p{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}
+
