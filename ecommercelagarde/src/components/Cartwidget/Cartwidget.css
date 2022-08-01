@@ -1,4 +1,10 @@
 .logo{
-    margin-right: 30px;
-    border: black 2px solid;
+    margin: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 75px;
+    height: 75px;
 }

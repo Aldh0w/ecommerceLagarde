@@ -5,7 +5,6 @@ export default function Navbar () {
             <nav>
                 <ul className='navbar'>
                     <li>Inicio</li>
-                    <li>La empresa</li>
                     <li>Productos</li>
                     <li>Contacto</li>
                 </ul>
