@@ -1,9 +1,9 @@
 import './ItemListContainer.css'
-
-export default function ItemListContainer (props) {
+import ItemList from '../ItemList';
+export default function ItemListContainer () {
     return(
         <div className='mensaje'>
-            <p>{props.mensaje}</p>
+            <ItemList />
         </div>
     );
 }

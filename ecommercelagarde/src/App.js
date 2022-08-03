@@ -1,8 +1,9 @@
-import './App.css';
 import Navbar from './components/Navbar';
 import Cartwidget from './components/Cartwidget';
 import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+
 function App() {
   return (
     <div className="app">
@@ -11,10 +12,7 @@ function App() {
           <Navbar />
         </div>
         <div>
-          <ItemListContainer mensaje="!Bienvenido!"/>
-        </div>
-        <div>
-          <ItemCount stock={3} inicial={1}/>
+          <ItemListContainer/>
         </div>
         
     </div>

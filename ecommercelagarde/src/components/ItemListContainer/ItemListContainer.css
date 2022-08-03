@@ -1,12 +1,7 @@
 .mensaje{
     background-color: cadetblue;
-    max-width: 500px;
     margin: 0 auto;
+    max-width: 1024px;
 }
 
-.mensaje p{
-    text-align: center;
-    font-size: 30px;
-    color: black;
-}
 

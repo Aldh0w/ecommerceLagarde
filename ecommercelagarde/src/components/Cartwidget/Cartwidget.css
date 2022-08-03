@@ -8,3 +8,10 @@
     width: 75px;
     height: 75px;
 }
+
+@media only screen and (max-width: 991px){
+    .logo img{
+        width: 115px;
+        height: 115px;
+    }
+}
