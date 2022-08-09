@@ -1,19 +1,18 @@
-import	{useState, useEffect} from 'react';
 import Item from '../Item';
-import getFetch from '../Data/data';
 import './ItemList.css'
-export default function ItemList (){
-    const [data,setData]=useState([])
-        useEffect(()=>{
-        getFetch
-        .then((resp)=>setData(resp))
-        .catch(err=>console.log(err))
-        },[]);
-   
+
+
+export default function ItemList (props){
     return(
-        <div className='flex'>
+        <div className='itemList'>
             {
-                data.map(prod=> <Item key={prod.id} imagen={prod.imagen} stock={prod.stock} precio={prod.precio} titulo={prod.titulo} categoria={prod.categoria} />)
+                props.producto.map(prod=> <Item   key={prod.id} 
+                                            id={prod.id}
+                                            imagen={prod.imagen} 
+                                            stock={prod.stock} 
+                                            precio={prod.precio} 
+                                            titulo={prod.titulo} 
+                                            categoria={prod.categoria} />)
             }
         </div>
     )

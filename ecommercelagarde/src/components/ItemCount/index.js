@@ -26,15 +26,16 @@ export default function ItemCount (props){
 
       <div>
         <ButtonToolbar className="mb-3" aria-label="Toolbar with Button groups">
-        <ButtonGroup className="me-2" aria-label="First group">
-        <Button className='ms-1'onClick={restarCarrito} variant="secondary">-</Button>{' '}
-        <InputGroup>
-        <InputGroup.Text id="btnGroupAddon">{controlador}</InputGroup.Text>
+        <ButtonGroup className="botons centrado" aria-label="First group">
+        <Button className='ms-1 mt-1'onClick={restarCarrito} variant="secondary" size='sm'>-</Button>{' '}
+        <InputGroup size="sm" className="mb-3">
+        <InputGroup.Text id="inputGroup-sizing-sm">{controlador}</InputGroup.Text>
         </InputGroup>
-        <Button className='me-1' onClick={sumarCarrito} variant="secondary">+</Button>{' '}
+        <Button className='me-1 mt-1' onClick={sumarCarrito} variant="secondary" size='sm'>+</Button>{' '}
         </ButtonGroup>
+        <Button className='mt-2 centrado' variant="primary" size='sm'>Agregar al carrito</Button>
         </ButtonToolbar>
-        <Button className='mb-2' variant="primary">Agregar al carrito</Button>
+        
       </div>
     );
 }

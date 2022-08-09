@@ -1,4 +1,6 @@
-.flex{
+.itemList{
     display: flex;
-    padding: 20px;
+    flex-wrap: wrap;
+    margin: 5px auto;
+    padding: 10px;
 }
