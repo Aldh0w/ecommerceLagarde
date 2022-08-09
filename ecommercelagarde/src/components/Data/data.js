@@ -15,6 +15,7 @@ const data = [
         categoria: "FERTILIZANTES",
         imagen: "https://cdn.pixabay.com/photo/2022/07/25/15/18/cat-7344042_960_720.jpg",
         precio: 3200,
+        descripcion: 'lorem impsum',
         stock: 5,
     },
 
@@ -24,6 +25,7 @@ const data = [
         categoria: "FERTILIZANTES",
         imagen: "https://cdn.pixabay.com/photo/2022/07/25/15/18/cat-7344042_960_720.jpg",
         precio: 3200,
+        descripcion: 'lorem impsum',
         stock: 5,
     },
 
@@ -33,6 +35,7 @@ const data = [
         categoria: "FERTILIZANTES",
         imagen: "https://cdn.pixabay.com/photo/2022/07/25/15/18/cat-7344042_960_720.jpg",
         precio: 3200,
+        descripcion: 'lorem impsum',
         stock: 5,
     },
 
@@ -42,6 +45,7 @@ const data = [
         categoria: "FERTILIZANTES",
         imagen: "https://cdn.pixabay.com/photo/2022/07/25/15/18/cat-7344042_960_720.jpg",
         precio: 3200,
+        descripcion: 'lorem impsum',
         stock: 5,
     },
 ]

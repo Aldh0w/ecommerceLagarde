@@ -7,6 +7,8 @@ export default function ItemDetailContainer (){
     
     const [product,setProduct]=useState();
     const {productId} = useParams();
+
+
     useEffect(()=>{
         getFetchById(productId)
         .then(product=>{
