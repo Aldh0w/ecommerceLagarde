@@ -25,7 +25,7 @@ const data = [
         categoria: "FERTILIZANTES",
         imagen: "https://i.postimg.cc/7LqTZL4m/kit-kawsay.jpg",
         precio: 3200,
-        descripcion: 'lorem impsum',
+        descripcion: 'kit X4 (1lts) Fertilizantes para el ciclo completo. Especial uso en hidroponia',
         stock: 5,
     },
 

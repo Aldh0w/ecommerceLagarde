@@ -33,8 +33,8 @@ export default function ItemCount (props){
         </InputGroup>
         <Button className='me-1 mt-1' onClick={sumarCarrito} variant="secondary" size='sm'>+</Button>{' '}
         </ButtonGroup>
-        <Button className='mt-2 centrado' variant="primary" size='sm'>Agregar al carrito</Button>
         </ButtonToolbar>
+        <Button className='mt-2 centrado' variant="primary" size='sm'>Agregar al carrito</Button>
         
       </div>
     );

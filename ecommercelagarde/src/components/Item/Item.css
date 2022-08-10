@@ -1,20 +1,20 @@
-.card{
+.tarjt{
     text-align: center;
 }
 
-.card:hover{
+.tarjt:hover{
     border: solid 1px  black;
 
 }
 
-.card-text{
+.tarjt-text{
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
 }
 
 
-.card-image{
+.tarjt-image{
     height: 180px;
 }
 

@@ -1,0 +1,10 @@
+.tarjeta{
+    width: 20rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tarjeta-text{
+    font-size: 18px;
+    font-weight: bold;
+}

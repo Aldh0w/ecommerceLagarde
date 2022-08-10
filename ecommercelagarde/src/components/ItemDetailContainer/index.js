@@ -17,9 +17,7 @@ export default function ItemDetailContainer (){
     },[productId]);
 
     return(
-        <div className="ItemDetailContainer">
             <ItemDetail {...product}/>
-        </div>
     )
    
 }
