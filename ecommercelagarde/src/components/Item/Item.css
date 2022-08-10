@@ -2,12 +2,28 @@
     text-align: center;
 }
 
+.card:hover{
+    border: solid 1px  black;
+
+}
+
 .card-text{
     font-size: 20px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 
 .card-image{
     height: 180px;
+}
+
+.Link {
+    text-decoration: none;
+    color: black;
+}
+
+.Link:hover{
+    text-decoration: none;
+    color: black;
 }

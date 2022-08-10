@@ -1,22 +1,41 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container'
 import	{useState, useEffect} from 'react';
-import { getFetch } from '../Data/data';
+import { getFetch, getFetchByCategoryId } from '../Data/data';
+import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList';
-import './ItemListContainer.css'
+
 
 export default function ItemListContainer () {
-
     const [data,setData]=useState([]);
-
+    const {categoryId} =useParams();
+    
+    
     useEffect(()=>{
-        getFetch().then(resp => {
-            setData(resp)
-        })
-    },[]);
+
+        if(!categoryId){
+            getFetch().then(data => {
+                setData(data)
+            })
+        }else{
+            getFetchByCategoryId(categoryId).then(data =>{
+                setData(data)
+            })
+        }
+    },[categoryId]);
+
+
 
     return(
-        <div className='itemListContainer'>
+
+       /* <Container>
+        <Row>
+          <Col><ItemList producto={data}/></Col>
+        </Row>
+        </Container>*/
+
+        <Container fluid> 
             <ItemList producto={data}/>
-        </div>
+        </Container>
     );
 }

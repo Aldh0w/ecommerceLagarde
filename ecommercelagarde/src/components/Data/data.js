@@ -11,9 +11,9 @@ const data = [
 
     {
         id: '2',
-        titulo: "NUTRIPACK NAMASTE",
+        titulo: "KIT TOPCROP",
         categoria: "FERTILIZANTES",
-        imagen: "https://cdn.pixabay.com/photo/2022/07/25/15/18/cat-7344042_960_720.jpg",
+        imagen: "https://i.postimg.cc/3xdcb3Vf/descarga.jpg",
         precio: 3200,
         descripcion: 'lorem impsum',
         stock: 5,
@@ -21,9 +21,9 @@ const data = [
 
     {
         id: '3',
-        titulo: "NUTRIPACK NAMASTE",
+        titulo: "KIT KAWSAY HIDROPONIA",
         categoria: "FERTILIZANTES",
-        imagen: "https://cdn.pixabay.com/photo/2022/07/25/15/18/cat-7344042_960_720.jpg",
+        imagen: "https://i.postimg.cc/7LqTZL4m/kit-kawsay.jpg",
         precio: 3200,
         descripcion: 'lorem impsum',
         stock: 5,
@@ -31,9 +31,9 @@ const data = [
 
     {
         id: '4',
-        titulo: "NUTRIPACK NAMASTE",
+        titulo: "KIT CULTIVO AZTECA",
         categoria: "FERTILIZANTES",
-        imagen: "https://cdn.pixabay.com/photo/2022/07/25/15/18/cat-7344042_960_720.jpg",
+        imagen: "https://i.postimg.cc/FR8yzQDz/KIT-AZTECA.jpg",
         precio: 3200,
         descripcion: 'lorem impsum',
         stock: 5,
@@ -41,9 +41,59 @@ const data = [
 
     {
         id: '5',
-        titulo: "NUTRIPACK NAMASTE",
-        categoria: "FERTILIZANTES",
-        imagen: "https://cdn.pixabay.com/photo/2022/07/25/15/18/cat-7344042_960_720.jpg",
+        titulo: "SUSTRATO KLASSMAN",
+        categoria: "SUSTRATOS",
+        imagen: "https://i.postimg.cc/63tsPDd7/sustrato-klasmann.jpg",
+        precio: 3200,
+        descripcion: 'lorem impsum',
+        stock: 5,
+    },
+
+    {
+        id: '6',
+        titulo: "SUSTRATO GROW MIX",
+        categoria: "SUSTRATOS",
+        imagen: "https://i.postimg.cc/3wjV2nP3/sustrato-grow-mix.jpg",
+        precio: 3200,
+        descripcion: 'lorem impsum',
+        stock: 5,
+    },
+
+    {
+        id: '7',
+        titulo: "SUSTRATO FIBRA DE COCO",
+        categoria: "SUSTRATOS",
+        imagen: "https://i.postimg.cc/Y0YVtjS8/fibra-santa-planta.jpg",
+        precio: 3200,
+        descripcion: 'lorem impsum',
+        stock: 5,
+    },
+
+    {
+        id: '8',
+        titulo: "CARPA 60*60*160 DR. CULTIVO",
+        categoria: "CARPAS",
+        imagen: "https://i.postimg.cc/c1wbzDbS/carpa-60-60-160.jpg",
+        precio: 3200,
+        descripcion: 'lorem impsum',
+        stock: 5,
+    },
+
+    {
+        id: '9',
+        titulo: "CARPA 80*80*180 DR. CULTIVO",
+        categoria: "CARPAS",
+        imagen: "https://i.postimg.cc/hP03DXnZ/carpa-Cultivo80-80-180.jpg",
+        precio: 3200,
+        descripcion: 'lorem impsum',
+        stock: 5,
+    },
+
+    {
+        id: '10',
+        titulo: "CARPA 100*100*200 DR. CULTIVO",
+        categoria: "CARPAS",
+        imagen: "https://i.postimg.cc/SN4vbWBz/carpa-Cultivo1-1-2.jpg",
         precio: 3200,
         descripcion: 'lorem impsum',
         stock: 5,
@@ -66,5 +116,13 @@ export const getFetchById = (id)=>{
     })
 };
 
+
+export const getFetchByCategoryId = (categoria)=>{
+    return new Promise((res)=>{
+        setTimeout(()=>{
+            res(data.filter(data => data.categoria === categoria))
+        }, 2000)
+    })
+}
 
 

@@ -10,14 +10,14 @@ export default function ItemCount (props){
   
     function sumarCarrito (){
         setControlador(controlador + 1);
-        if(controlador == props.stock){
+        if(controlador === props.stock){
             window.alert('Tienes el stock Maximo');
         }
     };
 
     function restarCarrito(){
         setControlador(controlador - 1);
-        if(controlador == 1){
+        if(controlador === 1){
             window.alert('No se pueden elegir menos de 1');
         }
     };

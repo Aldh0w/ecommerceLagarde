@@ -6,7 +6,7 @@ export default function ItemDetail(props){
 
      return(
          <>
-        <Card className="m-1 card" style={{ width: '18rem'}}>
+        <Card className="card" style={{ width: '18rem'}}>
         <Card.Img  className='card-image' variant="top" src={props.imagen}/>
         <Card.Body>
         <Card.Title >{props.titulo}</Card.Title>
