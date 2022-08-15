@@ -10,7 +10,6 @@ export default function ItemListContainer () {
     const [data,setData]=useState([]);
     const {categoryId} =useParams();
     
-    
     useEffect(()=>{
 
         if(!categoryId){
@@ -24,16 +23,7 @@ export default function ItemListContainer () {
         }
     },[categoryId]);
 
-
-
     return(
-
-       /* <Container>
-        <Row>
-          <Col><ItemList producto={data}/></Col>
-        </Row>
-        </Container>*/
-
         <Container fluid> 
             <ItemList producto={data}/>
         </Container>

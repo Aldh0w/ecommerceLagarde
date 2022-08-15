@@ -11,16 +11,21 @@ export default function ItemCount (props){
     function sumarCarrito (){
         setControlador(controlador + 1);
         if(controlador === props.stock){
-            window.alert('Tienes el stock Maximo');
+            setControlador(props.stock)
         }
     };
 
     function restarCarrito(){
         setControlador(controlador - 1);
         if(controlador === 1){
-            window.alert('No se pueden elegir menos de 1');
+            setControlador(1)
         }
     };
+
+    function agregarCarrito(){
+        window.alert('Se agregaron '+controlador+' producots al carrito');
+        props.agregarCarrito();
+    }
 
     return (  
 
@@ -34,7 +39,7 @@ export default function ItemCount (props){
         <Button className='me-1 mt-1' onClick={sumarCarrito} variant="secondary" size='sm'>+</Button>{' '}
         </ButtonGroup>
         </ButtonToolbar>
-        <Button className='mt-2 centrado' variant="primary" size='sm'>Agregar al carrito</Button>
+        <Button className='mt-2 centrado' variant="primary" size='sm' onClick={agregarCarrito}>Agregar al carrito</Button>
         
       </div>
     );
