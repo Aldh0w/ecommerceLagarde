@@ -22,10 +22,6 @@ export default function ItemCount (props){
         }
     };
 
-    function agregarCarrito(){
-        window.alert('Se agregaron '+controlador+' producots al carrito');
-        props.agregarCarrito();
-    }
 
     return (  
 
@@ -39,7 +35,7 @@ export default function ItemCount (props){
         <Button className='me-1 mt-1' onClick={sumarCarrito} variant="secondary" size='sm'>+</Button>{' '}
         </ButtonGroup>
         </ButtonToolbar>
-        <Button className='mt-2 centrado' variant="primary" size='sm' onClick={agregarCarrito}>Agregar al carrito</Button>
+        <Button className='mt-2 centrado' variant="primary" size='sm' onClick={()=> props.agregarCarrito(controlador)}>Agregar al carrito</Button>
         
       </div>
     );

@@ -1,4 +1,5 @@
-import	{useState,} from 'react';
+import	{useState} from 'react';
+import { useCartContext } from '../../context/CartContext';
 import ItemCount from "../ItemCount"
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
@@ -6,11 +7,16 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import './ItemDetail.css';
 
+
+
 export default function ItemDetail(props){
     const [controlador, setControlador] = useState(false);
-
-    const itemAgregado = () =>{ 
+    const {addProduct} = useCartContext();
+    
+    const itemAgregado = (cantidad) =>{ 
+        window.alert('Se agregaron '+cantidad+' producots al carrito');
         setControlador(true)
+        addProduct(props,cantidad)
     }
 
 
