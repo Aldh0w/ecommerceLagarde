@@ -9,3 +9,17 @@
 }
 
 
+.carrito{
+    text-decoration: none;
+    color: rgba(7, 112, 7, 0.781);
+}
+
+.carrito:hover{
+    text-decoration: none;
+    color: rgba(7, 112, 7, 0.781);
+}
+
+.carrito span{
+    margin-left: 2px;
+    font-size: 1.2rem;
+}

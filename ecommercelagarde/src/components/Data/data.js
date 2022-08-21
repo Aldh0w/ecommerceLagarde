@@ -104,7 +104,7 @@ export const getFetch = () =>{
     return new Promise((res,rej)=>{
         setTimeout(()=>{
             res(data)    
-        }, 2000);
+        }, 500);
     })
 };
 
@@ -112,7 +112,7 @@ export const getFetchById = (id)=>{
     return new Promise((res,rej)=>{
         setTimeout(()=>{
             res(data.find(data => data.id === id))
-        }, 2000)
+        }, 500)
     })
 };
 
@@ -121,7 +121,7 @@ export const getFetchByCategoryId = (categoria)=>{
     return new Promise((res)=>{
         setTimeout(()=>{
             res(data.filter(data => data.categoria === categoria))
-        }, 2000)
+        }, 500)
     })
 }
 
