@@ -1,6 +1,6 @@
 import	{useState, useEffect} from 'react';
-import {getFetchById} from '../Data/data';
 import { useParams } from 'react-router-dom';
+import {getFirestore, doc, getDoc} from 'firebase/firestore';
 import ItemDetail from "../ItemDetail"
 
 export default function ItemDetailContainer (){
@@ -10,14 +10,13 @@ export default function ItemDetailContainer (){
 
 
     useEffect(()=>{
-        getFetchById(productId)
-        .then(product=>{
-            setProduct(product)
-        })
+       const querydb = getFirestore();
+       const queryDoc = doc(querydb, 'productos', productId);
+       getDoc(queryDoc)
+       .then(res => setProduct({id: res.id, ...res.data()}))
     },[productId]);
 
     return(
             <ItemDetail {...product}/>
     )
-   
 }

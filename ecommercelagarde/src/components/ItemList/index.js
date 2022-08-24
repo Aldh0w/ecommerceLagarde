@@ -1,19 +1,21 @@
 import Item from '../Item';
-import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 export default function ItemList (props){
     return(
-            <Row xs={'auto'} md={'auto'}>
+            <>
                 {
-                    props.producto.map(prod=> <Item   key={prod.id} 
-                                                id={prod.id}
-                                                imagen={prod.imagen} 
-                                                stock={prod.stock} 
-                                                precio={prod.precio} 
-                                                titulo={prod.titulo} 
-                                                categoria={prod.categoria} />)
+                    props.producto.map(prod=><Col key={prod.id}> 
+                                                    <Item    
+                                                    id={prod.id}
+                                                    imagen={prod.imagen} 
+                                                    stock={prod.stock} 
+                                                    precio={prod.precio} 
+                                                    titulo={prod.titulo} 
+                                                    categoria={prod.categoria} />
+                                                 </Col>)
                 }
-            </Row>
+            </>
     )
 }

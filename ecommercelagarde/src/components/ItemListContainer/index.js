@@ -1,7 +1,7 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row';
 import	{useState, useEffect} from 'react';
-import { getFetch, getFetchByCategoryId } from '../Data/data';
+import {getFirestore, collection, getDocs, query, where} from 'firebase/firestore';
 import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList';
 
@@ -11,21 +11,21 @@ export default function ItemListContainer () {
     const {categoryId} =useParams();
     
     useEffect(()=>{
-
-        if(!categoryId){
-            getFetch().then(data => {
-                setData(data)
-            })
+        const querydb = getFirestore();
+        const queryCollection = collection(querydb,'productos');
+        if(categoryId){
+            const queryFilter = query(queryCollection, where('categoria', '==', categoryId))
+            getDocs(queryFilter)
+                .then(res => setData(res.docs.map(product => ({id: product.id, ...product.data() }))))
         }else{
-            getFetchByCategoryId(categoryId).then(data =>{
-                setData(data)
-            })
+            getDocs(queryCollection)
+                .then(res => setData(res.docs.map(product => ({id: product.id, ...product.data() }))))
         }
     },[categoryId]);
 
     return(
-        <Container fluid> 
+        <Row> 
             <ItemList producto={data}/>
-        </Container>
+        </Row>
     );
 }
