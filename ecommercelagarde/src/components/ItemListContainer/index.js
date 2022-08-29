@@ -24,7 +24,7 @@ export default function ItemListContainer () {
     },[categoryId]);
 
     return(
-        <Row> 
+        <Row sm={'auto'}> 
             <ItemList producto={data}/>
         </Row>
     );
