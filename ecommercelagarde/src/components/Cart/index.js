@@ -1,6 +1,7 @@
 import React from "react";
 import { useCartContext } from "../../context/CartContext";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { Link } from 'react-router-dom';
 import ItemCart from "../ItemCart";
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container'
@@ -9,14 +10,15 @@ import './Cart.css'
 
 const Cart = () =>{
     const { cart, totalPrice, clearCart } = useCartContext();
-
+    let nombre = document.getElementById('nombre');
+    let email = document.getElementById('email');
+    let numero = document.getElementById('telefono');
 
     const buy = {
         buyer: {
-            name:       'Gonzalo',
-            email:      'gonzalo@gmail.com',
-            phone:      '3414444444',
-            address:    'Lagarde'
+            name:       nombre,
+            email:      email,
+            phone:      numero,
         },
         items: cart.map(product =>({id: product.id, titulo: product.titulo, precio: product.precio, cantidad: product.cantidad })),
         total: totalPrice(),
@@ -26,16 +28,17 @@ const Cart = () =>{
         const db = getFirestore();
         const ordersCollection = collection(db, 'orders');
         addDoc(ordersCollection, buy)
-        .then(({id , name}) => window.alert('Muchas gracias por la compra '+ name +'.Su id de compra es: ' + id))
+        .then(({id}) => window.alert('.Su id de compra es: ' + id))
 
 
     }
 
     if(cart.length === 0){
         return(
-            <>
+            <div className="vacio">
                 <p>El Carrito esta vacio</p>
-            </>
+               <Link to='/'><Button className='ms-3' variant="primary" size='sm'>Regresar a la tienda</Button></Link>
+            </div>
         )
     }
 
@@ -68,11 +71,25 @@ const Cart = () =>{
                         </tr> 
                         <tr>
                             <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th><Button className='me-1 mt-1' onClick={confirmBuy} variant="success" size='sm'>Confirmar Compra</Button></th>
+                            <th>
+                                <label>
+                                    Nombre: <br/>
+                                    <input id='nombre' type="text"></input>
+                                </label>
+                            </th>
+                            <th>
+                                <label>
+                                    Email: <br/>
+                                    <input id='email' type="text"></input>
+                                </label>
+                            </th>
+                            <th>
+                                <label>
+                                    Telefono: <br/>
+                                    <input id='telefono' type="text"></input>
+                                </label>
+                            </th>
+                            <th><br></br><Button className='me-1 mt-1' onClick={confirmBuy} variant="success" size='sm'>Confirmar Compra</Button></th>
                         </tr> 
                     </tbody>       
                 </Table>
@@ -82,3 +99,7 @@ const Cart = () =>{
 
 
 export default Cart
+
+
+
+

@@ -28,10 +28,6 @@ const CartProvider = ({children}) =>{
         }
     }
 
-    console.log('carrito: ', cart);
-
-
-
     return(
         <CartContext.Provider value={{clearCart, isInCart, removeProduct, addProduct, totalPrice, totalProducts, cart}}>
             {children}

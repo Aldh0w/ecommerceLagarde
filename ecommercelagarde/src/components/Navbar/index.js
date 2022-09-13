@@ -9,7 +9,6 @@ import './Navbar.css'
 
 function Navbars() {
   const {totalProducts} = useCartContext();
-  console.log(totalProducts())
   return (
     <div className='nav'>
       <div>
@@ -22,11 +21,11 @@ function Navbars() {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link as={Link} to='/' >4:20 GROW</Nav.Link>
-                <Nav.Link as={Link} to='/store'>TIENDA</Nav.Link>
+                <Nav.Link as={Link} to='/'>TIENDA</Nav.Link>
                 <NavDropdown title="PRODUCTOS" id="basic-nav-dropdown">
-                  <NavDropdown.Item as={Link} to='/store/category/CARPAS' >CARPAS DE CULTIVO</NavDropdown.Item>
-                  <NavDropdown.Item as={Link} to='/store/category/FERTILIZANTES' >FERTILIZANTES</NavDropdown.Item>
-                  <NavDropdown.Item as={Link} to='/store/category/SUSTRATOS' >SUSTRATOS</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to='/category/CARPAS' >CARPAS DE CULTIVO</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to='/category/FERTILIZANTES' >FERTILIZANTES</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to='/category/SUSTRATOS' >SUSTRATOS</NavDropdown.Item>
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>
